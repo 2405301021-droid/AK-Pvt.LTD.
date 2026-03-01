@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AK Pvt. Ltd. — Driven by performance, powered by excellence. We deliver bold, results-driven solutions that move your business forward." />
+  <title>AK Pvt. Ltd. — Performance. Excellence. Results.</title>
+
+  <!-- Google Fonts: Inter + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HEADER / NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo">AK <span>Pvt. Ltd.</span></a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-decoration"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <span class="section-tag">AK Pvt. Ltd.</span>
+        <h1 class="hero-title">
+          Driven by <span class="highlight">Performance.</span><br />
+          Powered by Excellence.
+        </h1>
+        <p class="hero-text">
+          We don't follow trends — we set them. Bold strategies, relentless execution,
+          and results that speak louder than words. Your growth is our mandate.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get Started &#8594;</a>
+          <a href="#services" class="btn btn-outline">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: Text -->
+        <div class="about-text reveal">
+          <span class="section-tag">Who We Are</span>
+          <h2 class="section-title">Built Different.<br />Built to Dominate.</h2>
+          <p>
+            AK Pvt. Ltd. is a results-obsessed firm that thrives at the intersection of
+            strategy and execution. We partner with businesses that refuse to settle for
+            mediocrity — delivering bold solutions that accelerate growth.
+          </p>
+          <p>
+            From infrastructure to digital transformation, our team brings decades of
+            expertise, unwavering commitment, and a hunger for excellence that sets us apart
+            from the competition.
+          </p>
+        </div>
+
+        <!-- Right: Mission / Vision cards -->
+        <div class="about-cards reveal">
+          <div class="about-card">
+            <div class="icon">&#9888;</div>
+            <h4>Our Mission</h4>
+            <p>To deliver high-impact solutions that push the boundaries of what's possible for our clients.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">&#9733;</div>
+            <h4>Our Vision</h4>
+            <p>To become the gold standard in strategic business solutions across every industry we touch.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">&#9881;</div>
+            <h4>Innovation</h4>
+            <p>Cutting-edge technology and forward-thinking approaches fuel everything we build.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">&#10003;</div>
+            <h4>Integrity</h4>
+            <p>Transparency, trust, and accountability are the cornerstones of our every engagement.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SERVICES SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="services-header reveal">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Services That Move the Needle</h2>
+        <p class="section-subtitle">We focus on delivering measurable, high-impact outcomes — not empty promises.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon">&#9878;</div>
+          <h3>Strategic Consulting</h3>
+          <p>Data-driven strategies that cut through noise and deliver decisive competitive advantage.</p>
+          <button class="btn-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More &#8594;</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card reveal">
+          <div class="service-icon">&#9775;</div>
+          <h3>Digital Transformation</h3>
+          <p>End-to-end modernization — from legacy systems to cloud-first, AI-powered architectures.</p>
+          <button class="btn-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More &#8594;</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card reveal">
+          <div class="service-icon">&#9879;</div>
+          <h3>Infrastructure Development</h3>
+          <p>Robust, scalable infrastructure solutions engineered for reliability and peak performance.</p>
+          <button class="btn-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More &#8594;</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card reveal">
+          <div class="service-icon">&#9741;</div>
+          <h3>Brand &amp; Identity</h3>
+          <p>Craft a commanding market presence with brand strategies that resonate and convert.</p>
+          <button class="btn-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More &#8594;</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card reveal">
+          <div class="service-icon">&#9730;</div>
+          <h3>Cloud Solutions</h3>
+          <p>Seamless cloud migration and management — optimized for speed, security, and scale.</p>
+          <button class="btn-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More &#8594;</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card reveal">
+          <div class="service-icon">&#9889;</div>
+          <h3>Performance Marketing</h3>
+          <p>ROI-focused campaigns that generate real leads, real conversions, and real growth.</p>
+          <button class="btn-link" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More &#8594;</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROJECTS / PORTFOLIO SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <div class="projects-header reveal">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Projects That Speak for Themselves</h2>
+        <p class="section-subtitle">A curated selection of our most impactful engagements.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal"
+             data-title="Metro Tower Complex"
+             data-tag="Infrastructure · Architecture"
+             data-desc="A landmark 40-storey commercial complex in the heart of the financial district. Delivered 2 months ahead of schedule with zero safety incidents and LEED Gold certification."
+             data-img="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Metro Tower Complex" loading="lazy" />
+          <div class="project-overlay">
+            <h4>Metro Tower Complex</h4>
+            <span>Infrastructure · Architecture</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal"
+             data-title="NexGen Digital Platform"
+             data-tag="Digital Transformation"
+             data-desc="Complete digital overhaul for a Fortune 500 retail chain — unified commerce platform processing 2M+ daily transactions with 99.99% uptime."
+             data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="NexGen Digital Platform" loading="lazy" />
+          <div class="project-overlay">
+            <h4>NexGen Digital Platform</h4>
+            <span>Digital Transformation</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal"
+             data-title="Greenline Energy Hub"
+             data-tag="Sustainable Infrastructure"
+             data-desc="A 200MW renewable energy facility combining solar and wind — powering 150,000+ homes while achieving carbon-negative operations."
+             data-img="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Greenline Energy Hub" loading="lazy" />
+          <div class="project-overlay">
+            <h4>Greenline Energy Hub</h4>
+            <span>Sustainable Infrastructure</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal"
+             data-title="Apex Cloud Migration"
+             data-tag="Cloud Solutions"
+             data-desc="Migrated a legacy banking system with 10M+ records to a hybrid cloud architecture — reducing operational costs by 40% and improving response times by 300%."
+             data-img="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80" alt="Apex Cloud Migration" loading="lazy" />
+          <div class="project-overlay">
+            <h4>Apex Cloud Migration</h4>
+            <span>Cloud Solutions</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal"
+             data-title="Vanguard Brand Launch"
+             data-tag="Brand &amp; Identity"
+             data-desc="Full brand identity, go-to-market strategy, and launch campaign for a disruptive fintech startup — achieving 500K users in the first 90 days."
+             data-img="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Vanguard Brand Launch" loading="lazy" />
+          <div class="project-overlay">
+            <h4>Vanguard Brand Launch</h4>
+            <span>Brand &amp; Identity</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card reveal"
+             data-title="Horizon Smart Campus"
+             data-tag="IoT · Infrastructure"
+             data-desc="An IoT-integrated smart campus spanning 50 acres — featuring automated energy management, security systems, and real-time occupancy optimization."
+             data-img="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80" alt="Horizon Smart Campus" loading="lazy" />
+          <div class="project-overlay">
+            <h4>Horizon Smart Campus</h4>
+            <span>IoT · Infrastructure</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+    <div class="modal">
+      <img class="modal-img" id="modalImg" src="" alt="" />
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <span class="modal-tag" id="modalTag"></span>
+        <p id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       WHY CHOOSE US SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="why-us-grid">
+
+        <!-- Left: Points -->
+        <div class="why-us-points reveal">
+          <span class="section-tag">Why AK Pvt. Ltd.</span>
+          <h2 class="section-title">We Don't Just Deliver.<br />We Dominate.</h2>
+
+          <div class="why-point">
+            <div class="check">&#10003;</div>
+            <div>
+              <h4>Relentless Execution</h4>
+              <p>Every deadline met, every milestone crushed. We execute with military precision.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="check">&#10003;</div>
+            <div>
+              <h4>Industry-Leading Expertise</h4>
+              <p>Our team includes top-tier professionals with decades of combined experience across verticals.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="check">&#10003;</div>
+            <div>
+              <h4>Results, Not Excuses</h4>
+              <p>We are measured by outcomes, not efforts. Every engagement is ROI-focused and accountable.</p>
+            </div>
+          </div>
+
+          <div class="why-point">
+            <div class="check">&#10003;</div>
+            <div>
+              <h4>Long-Term Partnership</h4>
+              <p>We don't do one-offs. We build lasting relationships that grow with your business.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Counters -->
+        <div class="counters reveal">
+          <div class="counter-box">
+            <span class="count" data-target="150">0</span>
+            <span>Projects Delivered</span>
+          </div>
+          <div class="counter-box">
+            <span class="count" data-target="98">0</span>
+            <span>Client Retention %</span>
+          </div>
+          <div class="counter-box">
+            <span class="count" data-target="40">0</span>
+            <span>Industry Awards</span>
+          </div>
+          <div class="counter-box">
+            <span class="count" data-target="12">0</span>
+            <span>Years of Dominance</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="contact-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Something Powerful</h2>
+        <p class="section-subtitle">Ready to move? Fill out the form and our team will reach out within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="John Doe" />
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" />
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210" />
+            <span class="error-msg" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Tell us about your project..."></textarea>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Send Message &#8594;</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+
+        <!-- Map -->
+        <div class="map-placeholder reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086343965637!2d-122.41941548468168!3d37.77492927975946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d44a8aa3%3A0x4e22e6cd3e3e8f7!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1680000000000"
+            allowfullscreen=""
+            loading="lazy"
+            title="Our Location"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="logo">AK <span>Pvt. Ltd.</span></a>
+          <p>Driven by performance. Powered by excellence. We deliver bold strategies and relentless execution for businesses that refuse to settle.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Strategic Consulting</a></li>
+            <li><a href="#services">Digital Transformation</a></li>
+            <li><a href="#services">Infrastructure</a></li>
+            <li><a href="#services">Cloud Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">&#x1F517;</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">&#x1F426;</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">&#x1F310;</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">&#x1F4F7;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AK Pvt. Ltd. All rights reserved.</p>
+        <p>Designed with precision. Built for dominance.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8593;</button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
