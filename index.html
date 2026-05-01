@@ -476,5 +476,91 @@
 
   <!-- Script -->
   <script src="script.js"></script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CHATBASE CHATBOT WIDGET
+       Replace YOUR_CHATBOT_ID with your actual Chatbase chatbot ID
+  ═══════════════════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      // ── Chatbase Embed Configuration ──
+      // Replace 'YOUR_CHATBOT_ID' with your chatbot ID from the Chatbase dashboard
+      var CHATBOT_ID = 'YOUR_CHATBOT_ID';
+
+      // Initialize the chatbase command queue
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = function () {
+          if (!window.chatbase.q) {
+            window.chatbase.q = [];
+          }
+          window.chatbase.q.push(arguments);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get: function (target, prop) {
+            if (prop === "q") {
+              return target.q;
+            }
+            return function () {
+              return new Promise(function (resolve) {
+                target({ method: prop, args: Array.from(arguments), resolve: resolve });
+              });
+            };
+          }
+        });
+      }
+
+      // Load the Chatbase script
+      var script = document.createElement('script');
+      script.src = 'https://www.chatbase.co/embed.min.js';
+      script.id = CHATBOT_ID;
+      script.setAttribute('chatbotId', CHATBOT_ID);
+      script.setAttribute('domain', 'www.chatbase.co');
+      script.defer = true;
+      document.body.appendChild(script);
+
+      // ── User Identity / JWT Integration ──
+      // This section handles authenticated user identification with Chatbase.
+      // 
+      // HOW TO USE:
+      // 1. Set up a server endpoint (e.g., /api/chatbase-token) that generates
+      //    a JWT signed with your CHATBOT_IDENTITY_SECRET from Chatbase.
+      //    The JWT payload should include: { user_id, email, stripe_accounts, ... }
+      //
+      // 2. Uncomment the code below and update the fetch URL to point to your endpoint.
+      //
+      // Example server endpoint (Node.js / Express):
+      // ──────────────────────────────────────────
+      //   const jwt = require('jsonwebtoken');
+      //   const secret = process.env.CHATBOT_IDENTITY_SECRET;
+      //
+      //   app.get('/api/chatbase-token', async (req, res) => {
+      //     const user = await getSignedInUser(req);
+      //     const token = jwt.sign(
+      //       {
+      //         user_id: user.id,
+      //         email: user.email,
+      //         stripe_accounts: user.stripe_accounts,
+      //       },
+      //       secret,
+      //       { expiresIn: '1h' }
+      //     );
+      //     res.json({ token });
+      //   });
+      //
+      // Then uncomment the client-side code below:
+      // ──────────────────────────────────────────
+      // async function identifyChatbaseUser() {
+      //   try {
+      //     var response = await fetch('/api/chatbase-token');
+      //     var data = await response.json();
+      //     window.chatbase('identify', { token: data.token });
+      //   } catch (err) {
+      //     console.error('Chatbase identity error:', err);
+      //   }
+      // }
+      // identifyChatbaseUser();
+
+    })();
+  </script>
 </body>
 </html>
