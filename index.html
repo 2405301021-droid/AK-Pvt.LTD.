@@ -562,5 +562,123 @@
 
     })();
   </script>
+  <!-- Chatbot Floating Widget -->
+  <style>
+    #chatbot-container {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 400px;
+      height: 700px;
+      z-index: 10000;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      display: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    #chatbot-container.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #chatbot-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    #chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00f0ff, #7b2ff7);
+      border: none;
+      cursor: pointer;
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(123, 47, 247, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: chatPulse 2s infinite;
+    }
+    #chatbot-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(123, 47, 247, 0.7);
+    }
+    #chatbot-toggle svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+      transition: transform 0.3s ease;
+    }
+    #chatbot-toggle.open svg {
+      transform: rotate(180deg);
+    }
+    @keyframes chatPulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(123, 47, 247, 0.5); }
+      50% { box-shadow: 0 4px 30px rgba(0, 240, 255, 0.6); }
+    }
+    @media (max-width: 480px) {
+      #chatbot-container {
+        width: calc(100% - 20px);
+        right: 10px;
+        bottom: 80px;
+        height: 450px;
+      }
+      #chatbot-toggle {
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  </style>
+
+  <div id="chatbot-container">
+    <iframe
+      src="https://www.chatbase.co/chatbot-iframe/DuvSXI4SJzfDVNwNYVZyi"
+      width="100%"
+      style="height: 100%"
+      frameborder="0"
+      allow="microphone"
+    ></iframe>
+  </div>
+
+  <button id="chatbot-toggle" aria-label="Toggle Chatbot" onclick="toggleChatbot()">
+    <!-- Chat icon -->
+    <svg id="chat-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+    </svg>
+  </button>
+
+  <script>
+    function toggleChatbot() {
+      var container = document.getElementById('chatbot-container');
+      var btn = document.getElementById('chatbot-toggle');
+      var icon = document.getElementById('chat-icon');
+
+      if (container.classList.contains('active')) {
+        container.style.opacity = '0';
+        container.style.transform = 'translateY(20px)';
+        setTimeout(function() { container.classList.remove('active'); }, 300);
+        btn.classList.remove('open');
+        // Switch back to chat icon
+        icon.innerHTML = '<path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>';
+      } else {
+        container.classList.add('active');
+        requestAnimationFrame(function() {
+          container.style.opacity = '1';
+          container.style.transform = 'translateY(0)';
+        });
+        btn.classList.add('open');
+        // Switch to close icon
+        icon.innerHTML = '<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>';
+      }
+    }
+  </script>
 </body>
 </html>
